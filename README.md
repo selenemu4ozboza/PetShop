@@ -1,29 +1,31 @@
-#🐾 PetPoint
-Aplicación web de comercio electrónico de mascotas ficticia.
+# 🐾 PetPoint
 
-##Sobre el proyecto
-PetPoint es un sitio web de comercio electrónico de mascotas ficticio creado con fines educativos.
-Cuenta con un diseño moderno y responsivo, con listados de productos, navegación por categorías y una experiencia de carrito de compras. Está desarrollado para practicar el desarrollo frontend y el diseño UI/UX utilizando tecnologías web básicas.
+Sitio web de comercio electrónico ficticio de mascotas desarrollado con HTML, CSS y JavaScript.
 
-##Características
-Listado y catálogo de productos
-Navegación por categorías
-Carrito de compras interactivo
-Diseño responsivo para múltiples dispositivos
-Interfaz limpia y moderna
+## Descripción
+PetPoint simula una tienda online real de productos para mascotas. Diseñado para practicar
+desarrollo frontend y habilidades de diseño UI/UX a través de una experiencia eCommerce realista.
 
-##Tecnologías
-HTML
-CSS
-JavaScript
+## Características
+- Listado de productos y navegación por categorías
+- Experiencia de carrito de compras
+- Diseño responsive (móvil, tablet, escritorio)
+- Interfaz moderna y limpia
 
-##Como desplegar
-Clona el repositorio
-git clone https:/selenemu4ozboza/github.com//petpoint.git
-Abre la carpeta del proyecto
-Ejecuta el archivo index.html en tu navegador
+## Tecnologías
+- HTML5
+- CSS3
+- JavaScript
 
-##Autora
-Selene Muñoz Boza
+## Cómo ejecutar
+1. Clona el repositorio
+```bash
+git clone https://github.com/RaulTalbiDaza/PetPoint.git
+```
+2. Abre `index.html` en tu navegador
 
-Proyecto educativo desarrollado con fines académicos.
+No requiere dependencias ni servidor.
+
+---
+
+> Proyecto educativo — no es una tienda real.
