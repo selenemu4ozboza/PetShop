@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPoint - Tu tienda de mascotas</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="ph-fill ph-paw-print"></i>
+                <span>PetPoint</span>
+            </div>
+
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="ph ph-list"></i>
+            </div>
+
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#productos">Tienda</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <i class="ph ph-magnifying-glass"></i>
+                </div>
+
+                <div class="user-session" id="userSession">
+                    <i class="ph ph-user"></i>
+                    <span id="userName">Iniciar Sesión</span>
+                </div>
+
+                <div class="cart-icon" id="cartIconBtn">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-modal-overlay" id="cartModalOverlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h3>Tu Carrito</h3>
+                <i class="ph ph-x" id="closeCartBtn"></i>
+            </div>
+            <div class="cart-items" id="cartItems">
+            </div>
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">0.00€</span>
+                </div>
+                <div class="summary-line">
+                    <span>Envío:</span>
+                    <span id="cartShipping">0.00€</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total:</span>
+                    <span id="cartTotal">0.00€</span>
+                </div>
+                <button class="checkout-btn">Proceder al pago</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1>Todo lo que tu mascota necesita en un solo lugar <i class="ph-fill ph-paw-print"></i></h1>
+                    <p>Encuentra los mejores productos, alimentos y accesorios para hacer feliz a tu mejor amigo.</p>
+                    <a href="#productos" class="btn-primary">Ver tienda</a>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/mascotas.png" alt="Mascotas felices">
+                </div>
+            </div>
+        </section>
+
+        <section id="categorias" class="categories">
+            <div class="container">
+                <h2>Explora por Categorías</h2>
+                <div class="categories-grid">
+                    <div class="category-card" onclick="filterCategory('perros')">
+                        <img src="assets/perros.png" alt="Perros">
+                        <div class="category-info">
+                            <i class="ph-fill ph-dog"></i>
+                            <h3>Perros</h3>
+                        </div>
+                    </div>
+                    <div class="category-card" onclick="filterCategory('gatos')">
+                        <img src="assets/gatos.png" alt="Gatos">
+                        <div class="category-info">
+                            <i class="ph-fill ph-cat"></i>
+                            <h3>Gatos</h3>
+                        </div>
+                    </div>
+                    <div class="category-card" onclick="filterCategory('peces')">
+                        <img src="assets/pez.png" alt="Peces">
+                        <div class="category-info">
+                            <i class="ph-fill ph-fish"></i>
+                            <h3>Peces</h3>
+                        </div>
+                    </div>
+                    <div class="category-card" onclick="filterCategory('aves')">
+                        <img src="assets/pajaros.png" alt="Aves">
+                        <div class="category-info">
+                            <i class="ph-fill ph-bird"></i>
+                            <h3>Aves</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ofertas" class="offers">
+            <div class="container">
+                <div class="offer-banner">
+                    <div class="offer-content">
+                        <span class="badge">Oferta Especial</span>
+                        <h2>¡Envío Gratis!</h2>
+                        <p>En todos los pedidos superiores a 30€.</p>
+                    </div>
+                    <i class="ph-fill ph-truck"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="products">
+            <div class="container">
+                <div class="products-header">
+                    <h2>Productos Destacados</h2>
+                    <div class="products-controls">
+                        <div class="filter-controls">
+                            <button class="filter-btn active" data-category="all">Todos</button>
+                            <button class="filter-btn" data-category="perros">Perros</button>
+                            <button class="filter-btn" data-category="gatos">Gatos</button>
+                            <button class="filter-btn" data-category="peces">Peces</button>
+                            <button class="filter-btn" data-category="aves">Aves</button>
+                        </div>
+                        <div class="sort-controls">
+                            <select id="sortSelect">
+                                <option value="default">Ordenar por</option>
+                                <option value="price-asc">Precio: Menor a Mayor</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Los productos se renderizan dinámicamente aquí -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="logo">
+                    <i class="ph-fill ph-paw-print"></i>
+                    <span>PetPoint</span>
+                </div>
+                <p>Tu tienda de confianza para el cuidado y felicidad de tus mascotas.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#productos">Tienda</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="ph ph-map-pin"></i> Calle Mascota 123, Madrid</li>
+                    <li><i class="ph ph-phone"></i> +34 123 456 789</li>
+                    <li><i class="ph ph-envelope-simple"></i> hola@petpoint.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PetPoint. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
