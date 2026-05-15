@@ -20,7 +20,7 @@ desarrollo frontend y habilidades de diseño UI/UX a través de una experiencia 
 ## Cómo ejecutar
 1. Clona el repositorio
 ```bash
-git clone https://github.com/RaulTalbiDaza/PetPoint.git
+git clone (https://github.com/selenemu4ozboza/PetShop.git)
 ```
 2. Abre `index.html` en tu navegador
 
